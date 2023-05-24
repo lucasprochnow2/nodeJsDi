@@ -1,0 +1,22 @@
+{
+  "name": "nodejsdi",
+  "version": "1.0.0",
+  "description": "Practice dependency injection in nodeJS",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "run-server": "node --experimental-modules index.js"
+  },
+  "author": "Lucas Prochnow",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "eslint": "^8.0.1",
+    "eslint-config-standard": "^17.0.0",
+    "eslint-plugin-import": "^2.25.2",
+    "eslint-plugin-n": "^15.0.0",
+    "eslint-plugin-promise": "^6.0.0"
+  }
+}
