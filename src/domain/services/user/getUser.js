@@ -1,9 +1,5 @@
-export default function userService (args) {
-  console.log('***** args', args)
-
-  return async function GetUser () {
-    setTimeout(() => {
-      return Promise.resolve({ name: 'My User' })
-    }, 500)
+export default function getUserService () {
+  return async () => {
+    return { name: 'My User Name' }
   }
 }

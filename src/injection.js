@@ -8,10 +8,14 @@ export function initializeInjection () {
       'src/domain/services/**/*.js'
     ],
     {
-      formatName: 'camelCase',
-      lifetime: Lifetime.SINGLETON
+      formatName: (name) => {
+        console.log('formatName', name)
+        return name
+      },
+      lifetime: Lifetime.SINGLETON,
+      esModules: true
     }
   )
-  console.log(container)
+
   return container
 }
