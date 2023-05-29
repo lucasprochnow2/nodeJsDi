@@ -1,6 +1,6 @@
 import express from 'express'
 
-import { initializeInjection } from './injection.js'
+import initializeInjection from './injection.js'
 import routes from './rest/routes.js'
 
 const PORT = 3000

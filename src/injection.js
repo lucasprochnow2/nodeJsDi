@@ -1,20 +1,14 @@
-import awilix, { Lifetime } from 'awilix'
+import awilix from 'awilix'
 
-export function initializeInjection () {
+import options from './core/injection/options.js'
+import modulesPathList from './core/injection/modulesPathList.js'
+
+export default function injection () {
   const container = awilix.createContainer()
 
   container.loadModules(
-    [
-      'src/domain/services/**/*.js'
-    ],
-    {
-      formatName: (name) => {
-        console.log('formatName', name)
-        return name
-      },
-      lifetime: Lifetime.SINGLETON,
-      esModules: true
-    }
+    modulesPathList,
+    options
   )
 
   return container
