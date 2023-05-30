@@ -24,7 +24,6 @@ export default class ExpressServer {
       return next()
     })
     this.server.use('/user', routes.user)
-    this.server.use('/document', routes.document)
   }
 
   initialize () {
